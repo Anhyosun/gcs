@@ -15,8 +15,9 @@ public class bankmanager {
 			System.out.println("1. 계좌 생성");
 			System.out.println("2. 입금");
 			System.out.println("3. 출금");
-			System.out.println("4. 모든 계좌 보기");
-			System.out.println("5. 종료");
+			System.out.println("4. 계좌 삭제");
+			System.out.println("5. 모든 계좌 보기");
+			System.out.println("6. 종료");
 			input = sc.nextInt();
 			switch(input) {
 			case 1:
@@ -53,8 +54,17 @@ public class bankmanager {
 				for(int i=0;i<count;i++) {
 					creatbank[i].show();
 					}
-				break;
+				System.out.println("삭제할 계좌의 번호를 선택해주세요.");
+				sel = sc.nextInt();
+				for(int i=sel;i<count;i++) {
+					
+				}
 			case 5:
+				for(int i=0;i<count;i++) {
+					creatbank[i].show();
+					}
+				break;
+			case 6:
 				run = false;
 				break;
 			}
